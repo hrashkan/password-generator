@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./styles/app.css">
+</head>
+
+<body class="font-Inter bg-gray-900 text-white flex flex-col justify-center sm:h-screen overflow-y-auto">
+    <!-- header  -->
+    <header class="container p-5 mx-auto">
+        <h1 class="font-InterBold text-3xl text-center mb-5">
+            Instantly generate a secure, random password
+        </h1>
+        <span class="block text-center text-base text-gray-300 mb-2">
+            If you choose <span class="font-InterBold text-white cursor-pointer text-lg">uppercase</span> and your
+            password has at least <span class="font-InterBold text-white cursor-pointer text-lg">4</span> letters, it is
+            guaranteed
+            to have 
+            <span class="font-InterBold text-white cursor-pointer text-lg">at least
+                one capital letter</span>
+        </span>
+        <span class="block text-center text-base text-gray-300 mb-2">
+            If you choose <span class="font-InterBold text-white cursor-pointer text-lg">numbers</span> and your password has at least <span class="font-InterBold text-white cursor-pointer text-lg">5</span> letters, it is guaranteed to have 
+            <span class="font-InterBold text-white cursor-pointer text-lg">at least
+                one number</span>
+        </span>
+        <span class="block text-center text-base text-gray-300 mb-4">
+            If you choose <span class="font-InterBold text-white cursor-pointer text-lg">symbols</span> and your password has at least <span class="font-InterBold text-white cursor-pointer text-lg">6</span> letters, it is guaranteed to have 
+            <span class="font-InterBold text-white cursor-pointer text-lg">at least
+                one symbol</span>
+        </span>
+    </header>
+
+    <!-- body  -->
+    <main>
+        <div class="flex flex-col items-center justify-center">
+            <input type="text" id="output"
+                class="w-3/5 rounded-sm bg-gray-700 text-white mb-5 py-2 px-4 focus:outline-0 cursor-grab font-InterBold tracking-widest">
+
+            <form id="form" class="flex flex-wrap max-w-3xl w-full">
+                <div class="flex flex-wrap w-full">
+                    <div class="w-full md:w-3/4 p-5 flex items-center gap-5">
+                        <div class="border border-gray-700 flex justify-center items-center rounded-sm w-8 h-8"
+                            id="length-value">0</div>
+                        <div class="w-1/2 grow">
+                            <span>0</span>
+                            <input type="range" id="length" value="0" min="0" max="50"
+                                class="w-10/12 accent-blue-800 focus:accent-blue-950 cursor-pointer">
+                            <span>50</span>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/4 p-5">
+                        <div class="flex items-center">
+                            <input id="uppercase" type="checkbox" value=""
+                                class="w-4 h-4 accent-blue-800 cursor-pointer rounded-sm">
+                            <label for="uppercase" class="ml-2 text-sm font-medium text-gray-200">Uppercase</label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="numbers" type="checkbox" value=""
+                                class="w-4 h-4 accent-blue-800 cursor-pointer rounded-sm">
+                            <label for="numbers" class="ml-2 text-sm font-medium text-gray-200">Numbers</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="symbols" type="checkbox" value=""
+                                class="w-4 h-4 accent-blue-800 cursor-pointer rounded-sm">
+                            <label for="symbolsx" class="ml-2 text-sm font-medium text-gray-200">Symbols</label>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-center w-full gap-5 mb-5 sm:mb-0">
+                        <button type="submit"
+                            class="py-2 px-4 rounded-sm cursor-pointer font-InterBold border hover:bg-gray-700 transition-all hover:border-gray-700">Generate</button>
+                        <div id="copy"
+                            class="py-2 px-4 rounded-sm cursor-pointer font-InterBold border hover:bg-gray-700 transition-all hover:border-gray-700">
+                            Copy</di>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- footer  -->
+    <footer></footer>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
